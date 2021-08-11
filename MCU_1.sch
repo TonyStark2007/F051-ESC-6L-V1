@@ -34,26 +34,6 @@ F 3 "~" H 3800 1800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR?
-U 1 1 6050F99F
-P 3800 1700
-AR Path="/6050F99F" Ref="#PWR?"  Part="1" 
-AR Path="/60302A40/6050F99F" Ref="#PWR0101"  Part="1" 
-AR Path="/605793E5/6050F99F" Ref="#PWR?"  Part="1" 
-AR Path="/6054D32F/6050F99F" Ref="#PWR0111"  Part="1" 
-AR Path="/605CA831/6050F99F" Ref="#PWR0180"  Part="1" 
-AR Path="/6073F35C/6050F99F" Ref="#PWR05"  Part="1" 
-AR Path="/60799273/6050F99F" Ref="#PWR0153"  Part="1" 
-AR Path="/607F6DB5/6050F99F" Ref="#PWR0206"  Part="1" 
-AR Path="/60CE23C6/6050F99F" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0153" H 3800 1550 50  0001 C CNN
-F 1 "+3V3" H 3815 1873 50  0000 C CNN
-F 2 "" H 3800 1700 50  0001 C CNN
-F 3 "" H 3800 1700 50  0001 C CNN
-	1    3800 1700
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR?
 U 1 1 6050F9A0
 P 3800 1900
@@ -73,7 +53,6 @@ F 3 "" H 3800 1900 50  0001 C CNN
 	1    3800 1900
 	1    0    0    -1  
 $EndComp
-Connection ~ 3800 1700
 Connection ~ 3800 1900
 Wire Wire Line
 	3800 1700 4050 1700
@@ -4217,25 +4196,6 @@ Wire Wire Line
 Wire Wire Line
 	7200 2100 7200 2850
 $Comp
-L power:+3V3 #PWR0110
-U 1 1 6050F9B5
-P 5650 1250
-AR Path="/60302A40/6050F9B5" Ref="#PWR0110"  Part="1" 
-AR Path="/605793E5/6050F9B5" Ref="#PWR?"  Part="1" 
-AR Path="/6054D32F/6050F9B5" Ref="#PWR0161"  Part="1" 
-AR Path="/605CA831/6050F9B5" Ref="#PWR0188"  Part="1" 
-AR Path="/6073F35C/6050F9B5" Ref="#PWR01"  Part="1" 
-AR Path="/60799273/6050F9B5" Ref="#PWR0161"  Part="1" 
-AR Path="/607F6DB5/6050F9B5" Ref="#PWR0213"  Part="1" 
-AR Path="/60CE23C6/6050F9B5" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0161" H 5650 1100 50  0001 C CNN
-F 1 "+3V3" H 5550 1400 50  0000 C CNN
-F 2 "" H 5650 1250 50  0001 C CNN
-F 3 "" H 5650 1250 50  0001 C CNN
-	1    5650 1250
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C_Small C?
 U 1 1 6050F9B7
 P 6350 1350
@@ -4331,7 +4291,7 @@ AR Path="/60799273/6056DE0B" Ref="#PWR0166"  Part="1"
 AR Path="/607F6DB5/6056DE0B" Ref="#PWR0221"  Part="1" 
 AR Path="/60CE23C6/6056DE0B" Ref="#PWR?"  Part="1" 
 F 0 "#PWR0166" H 6350 1150 50  0001 C CNN
-F 1 "+3V3A_1" H 6335 1423 50  0000 C CNN
+F 1 "+3V3A_1" H 6550 1350 50  0000 C CNN
 F 2 "" H 6350 1250 50  0001 C CNN
 F 3 "" H 6350 1250 50  0001 C CNN
 	1    6350 1250
@@ -4340,25 +4300,6 @@ $EndComp
 Connection ~ 6350 1250
 Text Label 6500 3150 2    50   ~ 0
 NRST
-$Comp
-L power:+3V3 #PWR?
-U 1 1 6091EB43
-P 5200 1900
-AR Path="/60302A40/6091EB43" Ref="#PWR?"  Part="1" 
-AR Path="/605793E5/6091EB43" Ref="#PWR?"  Part="1" 
-AR Path="/6054D32F/6091EB43" Ref="#PWR?"  Part="1" 
-AR Path="/605CA831/6091EB43" Ref="#PWR?"  Part="1" 
-AR Path="/6073F35C/6091EB43" Ref="#PWR?"  Part="1" 
-AR Path="/60799273/6091EB43" Ref="#PWR0151"  Part="1" 
-AR Path="/607F6DB5/6091EB43" Ref="#PWR?"  Part="1" 
-AR Path="/60CE23C6/6091EB43" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0151" H 5200 1750 50  0001 C CNN
-F 1 "+3V3" H 5100 2050 50  0000 C CNN
-F 2 "" H 5200 1900 50  0001 C CNN
-F 3 "" H 5200 1900 50  0001 C CNN
-	1    5200 1900
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5200 1900 5300 1900
 $Comp
@@ -4437,7 +4378,11 @@ F 3 "" H 5400 1900 50  0001 C CNN
 	1    5400 1900
 	1    0    0    -1  
 $EndComp
-Connection ~ 5200 1900
+NoConn ~ 4700 2500
+NoConn ~ 4700 2600
+NoConn ~ 4700 3100
+NoConn ~ 4700 3000
+NoConn ~ 4700 3600
 $Comp
 L MCU_ST_STM32F0:STM32F051K6Ux U2
 U 1 1 60922A47
@@ -4451,9 +4396,39 @@ F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/da
 	1    5300 2800
 	1    0    0    -1  
 $EndComp
-NoConn ~ 4700 2500
-NoConn ~ 4700 2600
-NoConn ~ 4700 3100
-NoConn ~ 4700 3000
-NoConn ~ 4700 3600
+$Comp
+L power:+3V3_2 #PWR0179
+U 1 1 6123129C
+P 5650 1250
+F 0 "#PWR0179" H 5650 1100 50  0001 C CNN
+F 1 "+3V3_2" H 5450 1350 50  0000 C CNN
+F 2 "" H 5650 1250 50  0001 C CNN
+F 3 "" H 5650 1250 50  0001 C CNN
+	1    5650 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3_2 #PWR0180
+U 1 1 61231751
+P 3800 1700
+F 0 "#PWR0180" H 3800 1550 50  0001 C CNN
+F 1 "+3V3_2" H 3600 1800 50  0000 C CNN
+F 2 "" H 3800 1700 50  0001 C CNN
+F 3 "" H 3800 1700 50  0001 C CNN
+	1    3800 1700
+	1    0    0    -1  
+$EndComp
+Connection ~ 3800 1700
+$Comp
+L power:+3V3_2 #PWR0188
+U 1 1 612324FC
+P 5200 1900
+F 0 "#PWR0188" H 5200 1750 50  0001 C CNN
+F 1 "+3V3_2" H 5000 2000 50  0000 C CNN
+F 2 "" H 5200 1900 50  0001 C CNN
+F 3 "" H 5200 1900 50  0001 C CNN
+	1    5200 1900
+	1    0    0    -1  
+$EndComp
+Connection ~ 5200 1900
 $EndSCHEMATC

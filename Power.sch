@@ -106,18 +106,6 @@ Wire Wire Line
 	8600 3500 8600 3600
 Connection ~ 8600 3600
 $Comp
-L power:+3V3 #PWR0123
-U 1 1 603A9DDE
-P 8600 3500
-F 0 "#PWR0123" H 8600 3350 50  0001 C CNN
-F 1 "+3V3" H 8615 3673 50  0000 C CNN
-F 2 "" H 8600 3500 50  0001 C CNN
-F 3 "" H 8600 3500 50  0001 C CNN
-	1    8600 3500
-	1    0    0    -1  
-$EndComp
-Connection ~ 8600 3500
-$Comp
 L Device:C_Small C?
 U 1 1 603EB246
 P 6050 3800
@@ -623,11 +611,7 @@ Text Notes 4300 3200 0    79   ~ 16
 Wire Notes Line
 	7150 3050 7150 4050
 Wire Notes Line
-	7150 4050 8900 4050
-Wire Notes Line
-	8900 4050 8900 3050
-Wire Notes Line
-	8900 3050 7150 3050
+	10650 4050 10650 3050
 Text Notes 7200 3200 0    79   ~ 16
 3V3 LDO Regulator
 Wire Notes Line
@@ -672,4 +656,138 @@ Wire Wire Line
 Wire Wire Line
 	7050 4850 7050 4750
 Connection ~ 7050 4750
+$Comp
+L Regulator_Linear:LP2985-3.3 U16
+U 1 1 61219C4E
+P 9550 3600
+F 0 "U16" H 9550 3942 50  0000 C CNN
+F 1 "LP2985-3.3" H 9550 3851 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 9550 3925 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lp2985.pdf" H 9550 3600 50  0001 C CNN
+	1    9550 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 61219C54
+P 9050 3800
+AR Path="/61219C54" Ref="C?"  Part="1" 
+AR Path="/60308500/61219C54" Ref="C73"  Part="1" 
+F 0 "C73" H 9142 3846 50  0000 L CNN
+F 1 "1uF" H 9100 3800 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 9050 3800 50  0001 C CNN
+F 3 "~" H 9050 3800 50  0001 C CNN
+	1    9050 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 61219C5A
+P 10050 3800
+AR Path="/61219C5A" Ref="C?"  Part="1" 
+AR Path="/60308500/61219C5A" Ref="C77"  Part="1" 
+F 0 "C77" H 10142 3846 50  0000 L CNN
+F 1 "10nF" H 10100 3800 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 10050 3800 50  0001 C CNN
+F 3 "~" H 10050 3800 50  0001 C CNN
+	1    10050 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10050 3700 10050 3600
+Wire Wire Line
+	10050 3600 9950 3600
+Wire Wire Line
+	9050 3700 9050 3600
+Wire Wire Line
+	9050 3600 9150 3600
+Connection ~ 9050 3600
+Wire Wire Line
+	9050 3500 9150 3500
+$Comp
+L Device:C_Small C?
+U 1 1 61219C66
+P 10350 3800
+AR Path="/61219C66" Ref="C?"  Part="1" 
+AR Path="/60308500/61219C66" Ref="C78"  Part="1" 
+F 0 "C78" H 10442 3846 50  0000 L CNN
+F 1 "2.2uF" H 10400 3800 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 10350 3800 50  0001 C CNN
+F 3 "~" H 10350 3800 50  0001 C CNN
+	1    10350 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10350 3700 10350 3600
+Wire Wire Line
+	10350 3600 10050 3600
+Connection ~ 10050 3600
+$Comp
+L power:GND #PWR?
+U 1 1 61219C6F
+P 9550 3900
+AR Path="/61219C6F" Ref="#PWR?"  Part="1" 
+AR Path="/60308500/61219C6F" Ref="#PWR0113"  Part="1" 
+F 0 "#PWR0113" H 9550 3650 50  0001 C CNN
+F 1 "GND" H 9650 3800 50  0000 C CNN
+F 2 "" H 9550 3900 50  0001 C CNN
+F 3 "" H 9550 3900 50  0001 C CNN
+	1    9550 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 3900 9550 3900
+Connection ~ 9550 3900
+Wire Wire Line
+	9550 3900 10050 3900
+Connection ~ 10050 3900
+Wire Wire Line
+	10050 3900 10350 3900
+Wire Wire Line
+	9950 3500 10350 3500
+Wire Wire Line
+	10350 3500 10350 3600
+Connection ~ 10350 3600
+Wire Wire Line
+	9050 3500 9050 3600
+$Comp
+L power:+5V #PWR0123
+U 1 1 61219C85
+P 9050 3500
+F 0 "#PWR0123" H 9050 3350 50  0001 C CNN
+F 1 "+5V" H 9065 3673 50  0000 C CNN
+F 2 "" H 9050 3500 50  0001 C CNN
+F 3 "" H 9050 3500 50  0001 C CNN
+	1    9050 3500
+	1    0    0    -1  
+$EndComp
+Connection ~ 9050 3500
+Wire Notes Line
+	7150 3050 10650 3050
+Wire Notes Line
+	7150 4050 10650 4050
+$Comp
+L power:+3V3_1 #PWR0138
+U 1 1 612259E0
+P 8600 3500
+F 0 "#PWR0138" H 8600 3350 50  0001 C CNN
+F 1 "+3V3_1" H 8615 3673 50  0000 C CNN
+F 2 "" H 8600 3500 50  0001 C CNN
+F 3 "" H 8600 3500 50  0001 C CNN
+	1    8600 3500
+	1    0    0    -1  
+$EndComp
+Connection ~ 8600 3500
+$Comp
+L power:+3V3_2 #PWR0145
+U 1 1 61226B90
+P 10350 3500
+F 0 "#PWR0145" H 10350 3350 50  0001 C CNN
+F 1 "+3V3_2" H 10365 3673 50  0000 C CNN
+F 2 "" H 10350 3500 50  0001 C CNN
+F 3 "" H 10350 3500 50  0001 C CNN
+	1    10350 3500
+	1    0    0    -1  
+$EndComp
+Connection ~ 10350 3500
 $EndSCHEMATC
